@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UngService24Jan19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="UngService24Jan19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,9 @@
                                 <state key="normal" title="New Register">
                                     <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yov-9Z-gYL" kind="show" id="ngf-my-hi4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,8 +108,51 @@
             </objects>
             <point key="canvasLocation" x="47.200000000000003" y="20.239880059970016"/>
         </scene>
+        <!--Register-->
+        <scene sceneID="3Tb-9G-gdW">
+            <objects>
+                <viewController title="Register" id="yov-9Z-gYL" customClass="RegisterViewController" customModule="UngService24Jan19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PFS-lr-WMw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="YG0-cJ-2Cp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJv-TJ-jjp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="xHJ-8C-OQn">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="BackArrow" id="eCV-e9-ocx">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="FJT-mh-Wcd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YG0-cJ-2Cp" firstAttribute="leading" secondItem="6cA-ee-pga" secondAttribute="leading" id="OMg-BF-887"/>
+                            <constraint firstItem="AJv-TJ-jjp" firstAttribute="top" secondItem="6cA-ee-pga" secondAttribute="top" id="Trb-V8-nWs"/>
+                            <constraint firstItem="AJv-TJ-jjp" firstAttribute="trailing" secondItem="6cA-ee-pga" secondAttribute="trailing" id="bff-ec-XAL"/>
+                            <constraint firstItem="AJv-TJ-jjp" firstAttribute="leading" secondItem="6cA-ee-pga" secondAttribute="leading" id="idD-gw-E70"/>
+                            <constraint firstItem="YG0-cJ-2Cp" firstAttribute="bottom" secondItem="6cA-ee-pga" secondAttribute="bottom" id="krl-zI-6gP"/>
+                            <constraint firstItem="YG0-cJ-2Cp" firstAttribute="trailing" secondItem="6cA-ee-pga" secondAttribute="trailing" id="pRU-Dc-gLl"/>
+                            <constraint firstItem="YG0-cJ-2Cp" firstAttribute="top" secondItem="6cA-ee-pga" secondAttribute="top" id="uGw-Cr-xxQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6cA-ee-pga"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOV-Oh-vtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="19.340329835082461"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="BackArrow" width="72" height="72"/>
         <image name="Logo" width="170.5" height="170.5"/>
         <image name="Wallpaper" width="333" height="333"/>
     </resources>
