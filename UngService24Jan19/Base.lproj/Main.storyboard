@@ -116,9 +116,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="YG0-cJ-2Cp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJv-TJ-jjp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,7 +126,11 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="FJT-mh-Wcd"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="Upload" id="9J3-1d-Hq1"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="Upload" id="9J3-1d-Hq1">
+                                            <connections>
+                                                <action selector="uploadButton:" destination="yov-9Z-gYL" id="7DA-Ty-lUZ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -160,6 +161,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="YG0-cJ-2Cp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -179,6 +183,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6cA-ee-pga"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="TJH-KY-3W4" id="XG5-kk-ei6"/>
+                        <outlet property="passwordTextField" destination="NAP-dn-YUu" id="EZ1-ev-P7Y"/>
+                        <outlet property="userTextField" destination="a0D-AG-K06" id="zXP-zs-RWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOV-Oh-vtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
