@@ -123,23 +123,57 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="xHJ-8C-OQn">
+                                    <navigationItem title="Register" id="xHJ-8C-OQn">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="BackArrow" id="eCV-e9-ocx">
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="show" id="FJT-mh-Wcd"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="Upload" id="9J3-1d-Hq1"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJH-KY-3W4">
+                                <rect key="frame" x="62.5" y="100" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="CrT-sv-kJT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-AG-K06">
+                                <rect key="frame" x="62.5" y="138" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="1Py-Lq-KGW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAP-dn-YUu">
+                                <rect key="frame" x="62.5" y="176" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Xez-4g-zbi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YG0-cJ-2Cp" firstAttribute="leading" secondItem="6cA-ee-pga" secondAttribute="leading" id="OMg-BF-887"/>
                             <constraint firstItem="AJv-TJ-jjp" firstAttribute="top" secondItem="6cA-ee-pga" secondAttribute="top" id="Trb-V8-nWs"/>
+                            <constraint firstItem="a0D-AG-K06" firstAttribute="top" secondItem="TJH-KY-3W4" secondAttribute="bottom" constant="8" id="Wjf-i6-ayK"/>
+                            <constraint firstItem="a0D-AG-K06" firstAttribute="centerX" secondItem="PFS-lr-WMw" secondAttribute="centerX" id="YZC-Tr-GTK"/>
+                            <constraint firstItem="NAP-dn-YUu" firstAttribute="centerX" secondItem="PFS-lr-WMw" secondAttribute="centerX" id="apT-JK-PW1"/>
                             <constraint firstItem="AJv-TJ-jjp" firstAttribute="trailing" secondItem="6cA-ee-pga" secondAttribute="trailing" id="bff-ec-XAL"/>
+                            <constraint firstItem="NAP-dn-YUu" firstAttribute="top" secondItem="a0D-AG-K06" secondAttribute="bottom" constant="8" id="dZg-TQ-Vta"/>
                             <constraint firstItem="AJv-TJ-jjp" firstAttribute="leading" secondItem="6cA-ee-pga" secondAttribute="leading" id="idD-gw-E70"/>
+                            <constraint firstItem="TJH-KY-3W4" firstAttribute="centerX" secondItem="PFS-lr-WMw" secondAttribute="centerX" id="k6S-wY-alx"/>
                             <constraint firstItem="YG0-cJ-2Cp" firstAttribute="bottom" secondItem="6cA-ee-pga" secondAttribute="bottom" id="krl-zI-6gP"/>
+                            <constraint firstItem="TJH-KY-3W4" firstAttribute="top" secondItem="AJv-TJ-jjp" secondAttribute="bottom" constant="36" id="luJ-oo-p7f"/>
                             <constraint firstItem="YG0-cJ-2Cp" firstAttribute="trailing" secondItem="6cA-ee-pga" secondAttribute="trailing" id="pRU-Dc-gLl"/>
                             <constraint firstItem="YG0-cJ-2Cp" firstAttribute="top" secondItem="6cA-ee-pga" secondAttribute="top" id="uGw-Cr-xxQ"/>
                         </constraints>
@@ -154,6 +188,7 @@
     <resources>
         <image name="BackArrow" width="72" height="72"/>
         <image name="Logo" width="170.5" height="170.5"/>
+        <image name="Upload" width="72" height="72"/>
         <image name="Wallpaper" width="333" height="333"/>
     </resources>
 </document>
