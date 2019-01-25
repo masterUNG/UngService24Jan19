@@ -32,6 +32,24 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }   // Main Method
     
+    func uploadToServer(name: String, user: String, password: String) -> Void {
+        let myConstant = MyConstant()
+        let urlPHP: String = myConstant.findURLaddUser(name: name, user: user, password: password)
+        print("urlPHP ==> \(urlPHP)")
+        
+        
+    }
+    
+    func showAlert(title: String, message: String) -> Void {
+        
+        let objAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        objAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+            objAlert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(objAlert, animated: true, completion: nil)
+        
+    }
+    
     
     @IBAction func uploadButton(_ sender: UIBarButtonItem) {
         
@@ -49,8 +67,10 @@ class RegisterViewController: UIViewController {
         if (name!.count == 0) || (user!.count == 0) || (password!.count == 0) {
 //            Have Space
             print("Have Space")
+             showAlert(title: "Have Space", message: "Please Fill All Every Blank")
         } else {
             print("No Space")
+            uploadToServer(name: name!, user: user!, password: password!)
         }
         
         

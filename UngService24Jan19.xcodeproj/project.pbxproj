@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42D2FBA21FAB13E009EE472 /* MyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D2FB921FAB13E009EE472 /* MyConstant.swift */; };
 		C4E3B43921F97AA0005F031B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3B43821F97AA0005F031B /* AppDelegate.swift */; };
 		C4E3B43B21F97AA0005F031B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3B43A21F97AA0005F031B /* ViewController.swift */; };
 		C4E3B43E21F97AA0005F031B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E3B43C21F97AA0005F031B /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42D2FB921FAB13E009EE472 /* MyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConstant.swift; sourceTree = "<group>"; };
 		C4E3B43521F97AA0005F031B /* UngService24Jan19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UngService24Jan19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E3B43821F97AA0005F031B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E3B43A21F97AA0005F031B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				C4E3B43A21F97AA0005F031B /* ViewController.swift */,
 				C4E3B43C21F97AA0005F031B /* Main.storyboard */,
 				C4E3B44A21F998BB005F031B /* RegisterViewController.swift */,
+				C42D2FB921FAB13E009EE472 /* MyConstant.swift */,
 				C4E3B43F21F97AA2005F031B /* Assets.xcassets */,
 				C4E3B44121F97AA2005F031B /* LaunchScreen.storyboard */,
 				C4E3B44421F97AA2005F031B /* Info.plist */,
@@ -141,6 +144,7 @@
 				C4E3B44B21F998BB005F031B /* RegisterViewController.swift in Sources */,
 				C4E3B43B21F97AA0005F031B /* ViewController.swift in Sources */,
 				C4E3B43921F97AA0005F031B /* AppDelegate.swift in Sources */,
+				C42D2FBA21FAB13E009EE472 /* MyConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
