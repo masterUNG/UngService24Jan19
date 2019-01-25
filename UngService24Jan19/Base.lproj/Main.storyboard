@@ -17,13 +17,27 @@
                     <view key="view" contentMode="scaleToFill" id="oAV-bU-Sfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WEw-wx-KZB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WEw-wx-KZB" firstAttribute="leading" secondItem="NoK-f3-g6z" secondAttribute="leading" id="AoB-Oj-z4e"/>
+                            <constraint firstItem="WEw-wx-KZB" firstAttribute="trailing" secondItem="NoK-f3-g6z" secondAttribute="trailing" id="H5h-oj-8Lz"/>
+                            <constraint firstItem="WEw-wx-KZB" firstAttribute="bottom" secondItem="NoK-f3-g6z" secondAttribute="bottom" id="VVw-ix-XM9"/>
+                            <constraint firstItem="WEw-wx-KZB" firstAttribute="top" secondItem="NoK-f3-g6z" secondAttribute="top" id="Yau-UK-zhz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NoK-f3-g6z"/>
                     </view>
+                    <connections>
+                        <outlet property="myMapView" destination="WEw-wx-KZB" id="tGJ-6x-9Xn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWz-Im-C7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-822" y="20"/>
+            <point key="canvasLocation" x="-823.20000000000005" y="19.340329835082461"/>
         </scene>
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
