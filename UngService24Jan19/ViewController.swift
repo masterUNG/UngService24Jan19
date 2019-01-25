@@ -25,6 +25,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }   // Main Method
     
+    func myAlert(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     func checkSpace(user: String, password: String) -> Bool {
         var result: Bool?
         
@@ -45,6 +54,7 @@ class ViewController: UIViewController {
         
         if checkSpace(user: user!, password: password!) {
             print("Have Space")
+            myAlert(title: "Have Space", message: "Please Fill All Blank")
         }else {
             print("No Space")
         }
