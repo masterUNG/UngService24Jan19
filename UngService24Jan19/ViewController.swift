@@ -25,6 +25,44 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }   // Main Method
     
+    func checkAuthen(user: String, password: String) -> Void {
+        
+        let myConstant = MyConstant()
+        let urlPHP = myConstant.findJSONwhereUser(user: user)
+        print("urlPHP ==> \(urlPHP)")
+        
+        guard let url = URL(string: urlPHP) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            
+            guard let dataResponse = data, error == nil else {
+                print("Have Error")
+                return
+            }
+            
+            do {
+                
+                let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
+                print("jsonResponse ==> \(jsonResponse)")
+                
+            } catch let myError {
+                print(myError)
+                print("No \(user) in my Database")
+                
+                DispatchQueue.main.async {
+                    self.myAlert(title: "User False", message: "No \(user) in my Database")
+                }
+                
+            }
+            
+        }   // End Task
+        task.resume()
+        
+        
+        
+    }
+    
     func myAlert(title: String, message: String) -> Void {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
@@ -57,6 +95,7 @@ class ViewController: UIViewController {
             myAlert(title: "Have Space", message: "Please Fill All Blank")
         }else {
             print("No Space")
+            checkAuthen(user: user!, password: password!)
         }
         
     }
