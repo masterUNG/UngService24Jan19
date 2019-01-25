@@ -43,9 +43,37 @@ class ViewController: UIViewController {
             
             do {
                 
+//                Read JSon From API
                 let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
                 print("jsonResponse ==> \(jsonResponse)")
                 
+//                Change JSoN to Array
+                guard let jsonArray = jsonResponse as? [[String: Any]] else {
+                    return
+                }
+                print("jsonArray ==> \(jsonArray)")
+                
+                guard let jsonDictionary: Dictionary = jsonArray[0] else {
+                    return
+                }
+                print("jsonDic ==> \(jsonDictionary)")
+                
+                let truePassword: String = jsonDictionary["Password"]! as! String
+                print("truePass ==> \(truePassword)")
+             
+                if password == truePassword {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "GoService", sender: self)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.myAlert(title: "Password False", message: "Please Try Again Password")
+                    }
+                }
+                
+                 
+                
+ 
             } catch let myError {
                 print(myError)
                 print("No \(user) in my Database")
