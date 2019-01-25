@@ -53,9 +53,8 @@ class ViewController: UIViewController {
                 }
                 print("jsonArray ==> \(jsonArray)")
                 
-                guard let jsonDictionary: Dictionary = jsonArray[0] else {
-                    return
-                }
+                let jsonDictionary: Dictionary = jsonArray[0]
+                                
                 print("jsonDic ==> \(jsonDictionary)")
                 
                 let truePassword: String = jsonDictionary["Password"]! as! String
