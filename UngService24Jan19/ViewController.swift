@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var user: String?
+    var password: String?
+    
     
     
     @IBOutlet weak var userTextField: UITextField!
@@ -22,9 +25,30 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }   // Main Method
     
+    func checkSpace(user: String, password: String) -> Bool {
+        var result: Bool?
+        
+        if (user.count == 0) || (password.count == 0) {
+            result = true
+        }else {
+            result = false
+        }
+        return result!
+    }
+    
     
     
     @IBAction func loginButton(_ sender: UIButton) {
+        
+        user = userTextField.text
+        password = passwordTextField.text
+        
+        if checkSpace(user: user!, password: password!) {
+            print("Have Space")
+        }else {
+            print("No Space")
+        }
+        
     }
     
 
