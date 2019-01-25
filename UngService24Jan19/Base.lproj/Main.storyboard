@@ -126,7 +126,7 @@
                                     <navigationItem title="Register" id="xHJ-8C-OQn">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="BackArrow" id="eCV-e9-ocx">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="FJT-mh-Wcd"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="BackMain" id="FJT-mh-Wcd"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="Upload" id="9J3-1d-Hq1">

@@ -28,6 +28,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }   // Main Method
@@ -36,6 +37,43 @@ class RegisterViewController: UIViewController {
         let myConstant = MyConstant()
         let urlPHP: String = myConstant.findURLaddUser(name: name, user: user, password: password)
         print("urlPHP ==> \(urlPHP)")
+        
+//        upload Process
+        let url = URL(string: urlPHP)
+        let request = NSMutableURLRequest(url: url!)
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+            
+            if error != nil {
+                print("Have Error")
+            } else {
+                
+//                Receive data
+                if let testData = data {
+                    
+                    let canReadData = NSString(data: testData, encoding: String.Encoding.utf8.rawValue)
+                    print("canReadData ==> \(String(describing: canReadData))")
+                    
+                    let myResponse: String = canReadData! as String
+                    if Bool(myResponse)! {
+                        print("Success Upload")
+                        
+//                        Process Pop
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "BackMain", sender: self)
+                        }
+                        
+                    } else {
+                        print("Cannot Upload")
+                    }
+                    
+                    
+                }
+            }
+            
+        } // End Task
+        task.resume()
+        
+        
         
         
     }
